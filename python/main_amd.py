@@ -10,8 +10,8 @@ def send_string(ser, string_value):
 
 def get_gpu_temperature():
     device = ADLManager.getInstance().getDevices()[0]
-    print(device.getCurrentTemperature())
-
+    gpu_temp = device.getCurrentTemperature()
+    return gpu_temp
 
 while True:
     string_value = str(get_gpu_temperature())
